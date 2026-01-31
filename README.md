@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 防災 行動チェック
 
-## Getting Started
+災害発生時に「今やるべき行動」を即座に確認できる行動チェックリストアプリケーションです。
 
-First, run the development server:
+## 概要
+
+このアプリケーションは、一般市民が災害時に迷わず行動できるよう、災害の種類とフェーズごとに整理されたチェックリストを提供します。
+
+## 対応災害
+
+- **地震**: 平常時 / 発災直後 / 避難時
+- **台風**: 平常時 / 接近時 / 避難時
+- **大雨**: 平常時 / 警報時 / 避難時
+
+## 主な機能
+
+- 災害種別の選択
+- フェーズごとの行動チェックリスト
+- チェック状態のローカル保存
+- レスポンシブデザイン（スマートフォン対応）
+
+## 技術スタック
+
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **State Management**: React Hooks
+- **Data Storage**: localStorage
+
+## セットアップ
+
+### 必要な環境
+
+- Node.js 20以上
+
+### インストール
+
+```bash
+npm install
+```
+
+### 開発サーバーの起動
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ブラウザで [http://localhost:3000](http://localhost:3000) を開いてアプリケーションを確認できます。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### ビルド
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## プロジェクト構成
 
-To learn more about Next.js, take a look at the following resources:
+```
+disaster-action-checklist/
+├── app/                      # Next.js App Router
+│   ├── earthquake/          # 地震ページ
+│   ├── typhoon/             # 台風ページ
+│   ├── flood/               # 大雨ページ
+│   ├── layout.tsx           # ルートレイアウト
+│   ├── page.tsx             # トップページ
+│   └── globals.css          # グローバルスタイル
+├── components/              # Reactコンポーネント
+│   ├── DisasterCard.tsx     # 災害選択カード
+│   ├── PhaseTabs.tsx        # フェーズタブ
+│   ├── ChecklistItem.tsx    # チェックリストアイテム
+│   └── DisasterPageClient.tsx # 災害詳細ページクライアント
+├── data/                    # データ定義
+│   └── disasters.ts         # 災害データ
+├── types/                   # 型定義
+│   └── disaster.ts          # 災害関連の型
+└── package.json
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 使い方
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. トップページで災害種別（地震/台風/大雨）を選択
+2. フェーズタブで現在の状況に合わせたフェーズを選択
+3. 行動チェックリストの各項目を確認し、完了したらチェック
+4. チェック状態は自動的に保存され、次回アクセス時も保持されます
 
-## Deploy on Vercel
+## 今後の拡張案
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- PWA対応による完全オフライン化
+- 文字サイズ調整機能
+- 自治体情報へのリンク追加
+- 多言語対応
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ライセンス
+
+このプロジェクトは教育目的で作成されています。
