@@ -17,7 +17,7 @@ export const disasterData: Record<string, DisasterData> = {
       },
       {
         id: "immediate",
-        name: "発災直後",
+        name: "地震直後",
         items: [
           { id: "eq-immediate-1", text: "身の安全を確保する" },
           { id: "eq-immediate-2", text: "火の元を確認する" },

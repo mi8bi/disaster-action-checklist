@@ -8,7 +8,6 @@ export default function Home() {
           <h1 className="text-3xl font-bold text-gray-900 mb-2">
             防災 行動チェック
           </h1>
-          <p className="text-gray-600">災害時、今やることがすぐ分かります</p>
         </div>
 
         {/* 災害別チェックリスト */}
@@ -57,11 +56,6 @@ export default function Home() {
               emoji="📦"
             />
           </div>
-        </div>
-
-        {/* フッター */}
-        <div className="mt-12 text-center text-sm text-gray-500">
-          <p>いざという時のために、日頃から準備を</p>
         </div>
       </div>
     </div>
