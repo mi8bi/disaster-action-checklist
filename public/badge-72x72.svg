@@ -1,0 +1,5 @@
+<svg width="72" height="72" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100" height="100" rx="20" fill="#2563eb"/>
+  <!-- Shield shape -->
+  <path d="M50 15 L20 40 V65 C20 75 30 85 50 85 C70 85 80 75 80 65 V40 L50 15 Z" fill="white"/>
+</svg>

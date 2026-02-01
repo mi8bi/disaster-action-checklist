@@ -1,6 +1,21 @@
 // Service Worker for PWA
-const CACHE_NAME = "disaster-action-checklist-v1";
-const urlsToCache = ["/", "/offline.html"];
+const CACHE_NAME = "disaster-action-checklist-v2";
+const urlsToCache = [
+  "/",
+  "/contacts",
+  "/earthquake",
+  "/flood",
+  "/stocks",
+  "/typhoon",
+  "/offline.html",
+  "/icon-192x192.svg",
+  "/icon-512x512.svg",
+  "/icon-maskable-192x192.svg",
+  "/icon-maskable-512x512.svg",
+  "/badge-72x72.svg",
+  "/screenshot-540x720.svg",
+  "/screenshot-1280x720.svg",
+];
 
 // Install event - cache files
 self.addEventListener("install", (event) => {
@@ -80,8 +95,8 @@ self.addEventListener("push", (event) => {
   const data = event.data.json();
   const options = {
     body: data.body || "新しい通知があります",
-    icon: data.icon || "/icon-192x192.png",
-    badge: "/badge-72x72.png",
+    icon: data.icon || "/icon-192x192.svg",
+    badge: "/badge-72x72.svg",
     vibrate: [100, 50, 100],
     tag: "notification",
     requireInteraction: false,
