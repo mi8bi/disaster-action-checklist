@@ -27,7 +27,28 @@
 - レスポンシブデザイン（スマートフォン対応）
 - オフライン対応
 
-## 🚀 セットアップ
+## 技術スタック
+
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **State Management**: React Hooks
+- **Data Storage**: localStorage
+- **Progressive Web App (PWA)**: Service Worker対応でオフライン対応
+
+## PWA対応
+
+このアプリケーションはProgressive Web App (PWA)として構成されています：
+
+- ✅ **ホーム画面へのインストール** - モバイルデバイスにネイティブアプリのようにインストール可能
+- ✅ **オフライン対応** - インターネット接続がない場合も基本機能が利用可能
+- ✅ **Service Worker** - バックグラウンドでのキャッシング機能
+- ✅ **Web App Manifest** - デバイス上での表示設定
+- ✅ **セキュリティヘッダー** - XSS、クリックジャッキング等の攻撃対策
+
+詳細は[PWA_SETUP.md](./PWA_SETUP.md)を参照してください。
+
+## セットアップ
 
 ### 必要な環境
 - Node.js 20以上

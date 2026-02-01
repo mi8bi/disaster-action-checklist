@@ -1,0 +1,49 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1280" height="720" fill="#f0f9ff"/>
+
+  <!-- Header -->
+  <text x="640" y="80" font-family="sans-serif" font-size="36" font-weight="bold" text-anchor="middle" fill="#1e293b">防災 行動チェック</text>
+  <text x="640" y="120" font-family="sans-serif" font-size="20" text-anchor="middle" fill="#64748b">災害時、今やることがすぐ分かります</text>
+
+  <!-- Main Content Area -->
+  <g transform="translate(80, 180)">
+    <!-- Left Column -->
+    <g>
+      <text x="0" y="20" font-family="sans-serif" font-size="22" font-weight="bold" fill="#1e293b">🚨 災害別チェックリスト</text>
+      
+      <rect x="0" y="40" width="520" height="90" rx="12" fill="white" style="filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05));"/>
+      <text x="30" y="95" font-size="48">🏚️</text>
+      <text x="100" y="80" font-family="sans-serif" font-size="20" font-weight="bold" fill="#1e293b">地震</text>
+      <text x="100" y="105" font-family="sans-serif" font-size="16" fill="#64748b">地震発生時の行動チェックリスト</text>
+      
+      <rect x="0" y="140" width="520" height="90" rx="12" fill="white" style="filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05));"/>
+      <text x="30" y="195" font-size="48">🌀</text>
+      <text x="100" y="180" font-family="sans-serif" font-size="20" font-weight="bold" fill="#1e293b">台風</text>
+      <text x="100" y="205" font-family="sans-serif" font-size="16" fill="#64748b">台風接近時の行動チェックリスト</text>
+
+      <rect x="0" y="240" width="520" height="90" rx="12" fill="white" style="filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05));"/>
+      <text x="30" y="295" font-size="48">🌊</text>
+      <text x="100" y="280" font-family="sans-serif" font-size="20" font-weight="bold" fill="#1e293b">大雨</text>
+      <text x="100" y="305" font-family="sans-serif" font-size="16" fill="#64748b">大雨・洪水警報時の行動チェックリスト</text>
+    </g>
+
+    <!-- Right Column -->
+    <g transform="translate(600, 0)">
+      <text x="0" y="20" font-family="sans-serif" font-size="22" font-weight="bold" fill="#1e293b">📱 防災管理ツール</text>
+      
+      <rect x="0" y="40" width="520" height="90" rx="12" fill="white" style="filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05));"/>
+      <text x="30" y="95" font-size="48">📞</text>
+      <text x="100" y="80" font-family="sans-serif" font-size="20" font-weight="bold" fill="#1e293b">緊急連絡先</text>
+      <text x="100" y="105" font-family="sans-serif" font-size="16" fill="#64748b">家族や自治体の連絡先を管理</text>
+
+      <rect x="0" y="140" width="520" height="90" rx="12" fill="white" style="filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05));"/>
+      <text x="30" y="195" font-size="48">📦</text>
+      <text x="100" y="180" font-family="sans-serif" font-size="20" font-weight="bold" fill="#1e293b">備蓄品チェック</text>
+      <text x="100" y="205" font-family="sans-serif" font-size="16" fill="#64748b">防災用品の在庫と消費期限を管理</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <text x="640" y="680" font-family="sans-serif" font-size="16" text-anchor="middle" fill="#9ca3af">いざという時のために、日頃から準備を</text>
+</svg>

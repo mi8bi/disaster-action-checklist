@@ -1,0 +1,50 @@
+<svg width="540" height="720" viewBox="0 0 540 720" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="540" height="720" fill="#f0f9ff"/>
+
+  <!-- Header -->
+  <text x="270" y="80" font-family="sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#1e293b">防災 行動チェック</text>
+  <text x="270" y="110" font-family="sans-serif" font-size="16" text-anchor="middle" fill="#64748b">災害時、今やることがすぐ分かります</text>
+
+  <!-- Main Content Area -->
+  <g transform="translate(30, 150)">
+    <!-- Disaster Checklist Section -->
+    <text x="0" y="20" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1e293b">🚨 災害別チェックリスト</text>
+    
+    <!-- Card 1: Earthquake -->
+    <rect x="0" y="40" width="480" height="80" rx="12" fill="white" style="filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05));"/>
+    <text x="30" y="85" font-size="40">🏚️</text>
+    <text x="90" y="75" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1e293b">地震</text>
+    <text x="90" y="98" font-family="sans-serif" font-size="14" fill="#64748b">地震発生時の行動チェックリスト</text>
+    
+    <!-- Card 2: Typhoon -->
+    <rect x="0" y="130" width="480" height="80" rx="12" fill="white" style="filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05));"/>
+    <text x="30" y="175" font-size="40">🌀</text>
+    <text x="90" y="165" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1e293b">台風</text>
+    <text x="90" y="188" font-family="sans-serif" font-size="14" fill="#64748b">台風接近時の行動チェックリスト</text>
+
+    <!-- Card 3: Flood -->
+    <rect x="0" y="220" width="480" height="80" rx="12" fill="white" style="filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05));"/>
+    <text x="30" y="265" font-size="40">🌊</text>
+    <text x="90" y="255" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1e293b">大雨</text>
+    <text x="90" y="278" font-family="sans-serif" font-size="14" fill="#64748b">大雨・洪水警報時の行動チェックリスト</text>
+    
+    <!-- Tools Section -->
+    <text x="0" y="340" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1e293b">📱 防災管理ツール</text>
+    
+    <!-- Card 4: Contacts -->
+    <rect x="0" y="360" width="480" height="80" rx="12" fill="white" style="filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05));"/>
+    <text x="30" y="405" font-size="40">📞</text>
+    <text x="90" y="395" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1e293b">緊急連絡先</text>
+    <text x="90" y="418" font-family="sans-serif" font-size="14" fill="#64748b">家族や自治体の連絡先を管理</text>
+
+    <!-- Card 5: Stocks -->
+    <rect x="0" y="450" width="480" height="80" rx="12" fill="white" style="filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05));"/>
+    <text x="30" y="495" font-size="40">📦</text>
+    <text x="90" y="485" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1e293b">備蓄品チェック</text>
+    <text x="90" y="508" font-family="sans-serif" font-size="14" fill="#64748b">防災用品の在庫と消費期限を管理</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="270" y="680" font-family="sans-serif" font-size="14" text-anchor="middle" fill="#9ca3af">いざという時のために、日頃から準備を</text>
+</svg>
