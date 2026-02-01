@@ -6,5 +6,4 @@ export interface StockItem {
   quantity: number;
   unit: string;
   expiryDate?: string;
-  lastChecked?: string;
 }

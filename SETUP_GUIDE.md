@@ -2,13 +2,15 @@
 
 ## プロジェクト概要
 
-「防災 行動チェック」は、災害発生時に一般市民が「今やるべき行動」を即座に確認できるWebアプリケーションです。
+「防災 行動チェック」は、災害発生時に一般市民が「今やるべき行動」を即座に確認できるWebアプリケーションです。災害時の行動チェックリストに加え、緊急連絡先や備蓄品の管理機能も提供します。
 
 ### 主な特徴
 
 - ✅ 地震・台風・大雨の3種類の災害に対応
 - ✅ フェーズごとに整理された行動チェックリスト
-- ✅ チェック状態の自動保存（localStorage使用）
+- ✅ 緊急連絡先の管理機能
+- ✅ 備蓄品の在庫と消費期限の管理機能
+- ✅ チェック状態や登録データの自動保存（localStorage使用）
 - ✅ スマートフォン対応のレスポンシブデザイン
 - ✅ シンプルで直感的なUI
 
@@ -68,9 +70,9 @@ npm start
 ## 技術仕様
 
 ### 使用技術
-- **Framework**: Next.js 16 (App Router)
+- **Framework**: Next.js (App Router)
 - **言語**: TypeScript
-- **スタイリング**: Tailwind CSS 4
+- **スタイリング**: Tailwind CSS
 - **状態管理**: React Hooks (useState, useEffect)
 - **データ永続化**: localStorage
 
@@ -78,41 +80,52 @@ npm start
 
 ```
 disaster-action-checklist/
-├── app/                          # Next.js App Router
-│   ├── earthquake/page.tsx      # 地震ページ
-│   ├── typhoon/page.tsx         # 台風ページ
-│   ├── flood/page.tsx           # 大雨ページ
-│   ├── layout.tsx               # ルートレイアウト
-│   ├── page.tsx                 # トップページ（災害選択）
-│   └── globals.css              # グローバルスタイル
-├── components/                   # Reactコンポーネント
-│   ├── DisasterCard.tsx         # 災害選択カード
-│   ├── PhaseTabs.tsx            # フェーズ切替タブ
-│   ├── ChecklistItem.tsx        # チェックリストアイテム
-│   └── DisasterPageClient.tsx   # 災害詳細ページ（クライアント）
+├── app/(main)/                 # Next.js App Router
+│   ├── earthquake/page.tsx     # 地震ページ
+│   ├── typhoon/page.tsx        # 台風ページ
+│   ├── flood/page.tsx          # 大雨ページ
+│   ├── contacts/page.tsx       # 緊急連絡先ページ
+│   ├── stocks/page.tsx         # 備蓄品管理ページ
+│   ├── layout.tsx
+│   ├── page.tsx
+│   └── globals.css
+├── components/                 # Reactコンポーネント
+│   ├── DisasterCard.tsx
+│   ├── PhaseTabs.tsx
+│   ├── ChecklistItem.tsx
+│   └── DisasterPageClient.tsx
 ├── data/
-│   └── disasters.ts             # 災害データ定義
+│   └── disasters.ts
 ├── types/
-│   └── disaster.ts              # TypeScript型定義
+│   ├── disaster.ts
+│   ├── contact.ts
+│   └── stock.ts
 └── package.json
 ```
 
 ## 機能説明
 
 ### 1. トップページ（/）
-- 3種類の災害カードを表示
-- カードをクリックすると各災害の詳細ページへ遷移
+- 3種類の災害カードと、2種類の防災管理ツールカードを表示
+- カードをクリックすると各機能のページへ遷移
 
 ### 2. 災害詳細ページ（/earthquake, /typhoon, /flood）
 - フェーズタブで状況を切り替え
 - 各フェーズの行動チェックリストを表示
 - チェックボックスで完了状態を管理
-- 完了状況を画面下部に表示
 
-### 3. データ永続化
-- チェック状態はlocalStorageに自動保存
+### 3. 緊急連絡先ページ（/contacts）
+- 家族や自治体などの連絡先を登録・管理
+- ワンタップで電話やメールが可能
+
+### 4. 備蓄品チェックページ（/stocks）
+- 防災用品の在庫と消費期限を管理
+- カテゴリ別でのフィルタリング
+- 期限切れ・期限間近のアイテムをハイライト表示
+
+### 5. データ永続化
+- すべてのデータはlocalStorageに自動保存
 - ページをリロードしても状態を保持
-- 災害種別ごとに独立して管理
 
 ## カスタマイズ方法
 
@@ -126,10 +139,6 @@ disaster-action-checklist/
   text: '行動項目の説明'  // 表示するテキスト
 }
 ```
-
-### スタイルのカスタマイズ
-
-Tailwind CSSを使用しているため、各コンポーネントのクラス名を変更することで簡単にスタイルを調整できます。
 
 ## トラブルシューティング
 
@@ -148,10 +157,11 @@ npm run dev -- -p 3001
 ## 今後の拡張案
 
 - [ ] PWA対応による完全オフライン化
-- [ ] 文字サイズ調整機能（高齢者対応）
+- [ ] 文字サイズ調整機能
+- [ ] ダークモード対応
 - [ ] 自治体の防災情報へのリンク
-- [ ] 緊急連絡先の登録機能
 - [ ] 多言語対応（英語、中国語など）
+- [ ] データのエクスポート/インポート機能
 
 ## ライセンス
 
@@ -160,4 +170,4 @@ npm run dev -- -p 3001
 ---
 
 **開発**: 防災行動チェックプロジェクトチーム
-**バージョン**: 1.0.0
+**バージョン**: 2.0.0

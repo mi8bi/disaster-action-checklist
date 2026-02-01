@@ -86,7 +86,6 @@ export default function StocksPage() {
       quantity: formData.quantity,
       unit: formData.unit,
       expiryDate: formData.expiryDate || undefined,
-      lastChecked: new Date().toISOString().split("T")[0],
     };
 
     setStocks([...stocks, newStock]);
@@ -124,7 +123,6 @@ export default function StocksPage() {
               quantity: formData.quantity,
               unit: formData.unit,
               expiryDate: formData.expiryDate || undefined,
-              lastChecked: new Date().toISOString().split("T")[0],
             }
           : s,
       ),
